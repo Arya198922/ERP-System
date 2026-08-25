@@ -1,0 +1,109 @@
+
+
+
+/* ===== WMS MOBILE DRAWER ===== */
+
+.wms-mobile-menu,
+.wms-mobile-close,
+.wms-mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .wms-mobile-menu {
+    display: flex !important;
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    z-index: 10002 !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    border: none !important;
+    border-radius: 10px !important;
+
+    background: #2563eb !important;
+    color: #ffffff !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 22px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.18) !important;
+  }
+
+  .wms-mobile-overlay {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 10000 !important;
+    background: rgba(15, 23, 42, .45) !important;
+  }
+
+  .wms-sidebar {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+
+    width: 270px !important;
+    max-width: 82vw !important;
+
+    z-index: 10001 !important;
+
+    transform: translateX(-105%) !important;
+    transition: transform .25s ease !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .wms-sidebar.wms-sidebar-open {
+    transform: translateX(0) !important;
+  }
+
+  .wms-mobile-close {
+    display: flex !important;
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 10003 !important;
+
+    width: 34px !important;
+    height: 34px !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    background: #1f2937 !important;
+    color: #ffffff !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 24px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+  }
+
+  .wms-main,
+  main {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  header {
+    padding-left: 66px !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .wms-mobile-menu,
+  .wms-mobile-close,
+  .wms-mobile-overlay {
+    display: none !important;
+  }
+}
